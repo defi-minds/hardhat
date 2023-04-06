@@ -1,0 +1,8 @@
+#!bin/bash
+build() {
+docker build -t hardhat . --network=host
+docker run -it hardhat --network=host
+docker start hardhat
+docker attach hardhat
+}
+build
